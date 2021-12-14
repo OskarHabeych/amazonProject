@@ -1,14 +1,21 @@
 <nav>
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
+      
+      <!-- Logo sistema  -->
+      <a routerLink="/index"><img src="assets/Logo oficial Proyecto MisionTic Ciclo 4.jpeg" class="img-responsive"  width="120" height="65" alt="image"> </a>
+      <!--a href="#" class="brand-logo">Logo</a> -->
+      
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a routerLink="/admin/get">Usuarios</a></li>
-        <li><a routerLink="encomienda/get">Encomiendas</a></li>
-        <li><a routerLink="servicios/get">Servicios</a></li>
-        <li><a routerLink="cliente/get">Clientes</a></li>
+        
+        <!-- Menu sistema -->
+        <li *ngIf="activeSession"><a routerLink="/admin/get">Usuarios</a></li>
+        <li *ngIf="activeSession"><a routerLink="encomienda/get">Encomiendas</a></li>
+        <li *ngIf="activeSession"><a routerLink="servicios/get">Servicios</a></li>
+        <li *ngIf="activeSession"><a routerLink="cliente/get">Clientes</a></li>
         <!-- li class=" teal lighten-3"><a routerLink="/seguridad/login">Login</a></li -->
         <!-- Sesion -->
       <li *ngIf="!activeSession"><a routerLink="/seguridad/login">Login</a></li>
+      <li class="#7986cb indigo lighten-2" *ngIf="!activeSession"><a routerLink="/admin/create">¡Registrarme!</a></li>
       <li *ngIf="activeSession"><a routerLink="/seguridad/logout">Cerrar Sesion</a></li>
       </ul>
     </div>
