@@ -15,7 +15,7 @@ export class UsuariosService {
       this.token = this.seguridadService.getToken();
     }
 
-    url = "http://localhost:3000"
+    url = "https://apiloopbackoscari.herokuapp.com"
     token: string = ''
 
     store(usuario: UsuarioModelo): Observable<UsuarioModelo> {
