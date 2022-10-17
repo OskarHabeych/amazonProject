@@ -15,7 +15,7 @@ export class LoginComponent implements OnInit {
 
   fgValidacion = this.fb.group({
     correo: ['', [Validators.required, Validators.email]],
-    clave: ['', [Validators.required]]
+    clave: ['', [Validators.required, Validators.minLength(10)]]
   });
 
   constructor(private fb: FormBuilder, private seguridadService: SeguridadService,
