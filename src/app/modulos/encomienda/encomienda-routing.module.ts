@@ -9,6 +9,7 @@ const routes: Routes = [
   {
     path: 'create',
     component: CreateComponent,
+    canActivate: [SessionGuard]
   },{
     path: 'edit/:id',
     component: EditComponent,
